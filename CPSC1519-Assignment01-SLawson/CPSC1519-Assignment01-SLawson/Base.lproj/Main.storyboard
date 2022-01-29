@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="MainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="CPSC1519_Assignment01_SLawson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-u1-3Xw">
+                                <rect key="frame" x="20" y="52" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="gnE-C5-XeG"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hw8-d0-ahL">
+                                <rect key="frame" x="20" y="94" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-MZ-vMc">
+                                <rect key="frame" x="164.5" y="157" width="85" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Say Hello"/>
+                                <connections>
+                                    <action selector="changeGreeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuD-aY-Rar"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf8-8x-5ID">
+                                <rect key="frame" x="20" y="44" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXn-6l-166">
+                                <rect key="frame" x="40" y="225" width="334" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="rVU-oY-ES9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovn-2W-hvJ">
+                                <rect key="frame" x="40" y="274" width="334" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Celcius Temperature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f05-9x-6Kc">
+                                <rect key="frame" x="40" y="312" width="334" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEb-r7-ZL8">
+                                <rect key="frame" x="160" y="354" width="94" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Convert"/>
+                                <connections>
+                                    <action selector="convertButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYP-l4-ws9"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-35" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="iWD-p1-6sM">
+                                <rect key="frame" x="160" y="393" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="celciusStepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LKi-1z-qOU"/>
+                                </connections>
+                            </stepper>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-35" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="h52-TM-1yJ">
+                                <rect key="frame" x="38" y="449" width="338" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="celciusSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YUp-7P-GOj"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="MXn-6l-166" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="EBJ-J2-iaa"/>
+                            <constraint firstItem="YK2-u1-3Xw" firstAttribute="top" secondItem="Gf8-8x-5ID" secondAttribute="bottom" constant="8" symbolic="YES" id="F4e-Ai-fD6"/>
+                            <constraint firstItem="MXn-6l-166" firstAttribute="top" secondItem="x8x-MZ-vMc" secondAttribute="bottom" constant="37" id="FJ0-x3-gn7"/>
+                            <constraint firstItem="hw8-d0-ahL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GjJ-Xt-gsV"/>
+                            <constraint firstItem="x8x-MZ-vMc" firstAttribute="top" secondItem="hw8-d0-ahL" secondAttribute="bottom" constant="29" id="I4E-9h-PJb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YK2-u1-3Xw" secondAttribute="trailing" constant="20" id="Iu9-OQ-tFX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gf8-8x-5ID" secondAttribute="trailing" constant="20" id="Rf0-5H-iGE"/>
+                            <constraint firstItem="YK2-u1-3Xw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vcu-yD-PYS"/>
+                            <constraint firstItem="Gf8-8x-5ID" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="b6M-DI-mb2"/>
+                            <constraint firstItem="x8x-MZ-vMc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="boy-Wz-e3i"/>
+                            <constraint firstItem="hw8-d0-ahL" firstAttribute="top" secondItem="YK2-u1-3Xw" secondAttribute="bottom" constant="8" symbolic="YES" id="ctf-F9-nnh"/>
+                            <constraint firstItem="MXn-6l-166" firstAttribute="centerX" secondItem="x8x-MZ-vMc" secondAttribute="centerX" id="frD-uu-MXn"/>
+                            <constraint firstItem="Gf8-8x-5ID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="mSF-hE-ocq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hw8-d0-ahL" secondAttribute="trailing" constant="20" id="vhs-mH-v6Y"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2hv-MV-GVB" appends="YES" id="bdh-TW-4lF"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="hw8-d0-ahL" id="VTz-XN-Nzf"/>
+                        <outlet property="celciusSlider" destination="h52-TM-1yJ" id="JJk-4p-3Rk"/>
+                        <outlet property="celciusStepper" destination="iWD-p1-6sM" id="dJP-MQ-bQa"/>
+                        <outlet property="celciusTextField" destination="f05-9x-6Kc" id="Nvp-M6-V6J"/>
+                        <outlet property="fahrenheightLabel" destination="ovn-2W-hvJ" id="sNp-dU-6ig"/>
+                        <outlet property="nameTextField" destination="YK2-u1-3Xw" id="ayB-Ta-oKY"/>
+                        <outlet property="resultLabel" destination="Gf8-8x-5ID" id="lLP-cF-FKY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2hv-MV-GVB">
+                    <connections>
+                        <action selector="dismissKeyboardTap:" destination="BYZ-38-t0r" id="sFQ-Dp-uoR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
