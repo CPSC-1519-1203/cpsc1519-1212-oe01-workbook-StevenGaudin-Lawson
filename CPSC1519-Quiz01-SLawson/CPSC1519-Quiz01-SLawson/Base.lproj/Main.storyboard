@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CPSC1519_Quiz01_SLawson" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPSC1519 - Quiz 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQt-vl-JOD">
+                                <rect key="frame" x="20" y="44" width="374" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEi-Ig-8Pm">
+                                <rect key="frame" x="20" y="82" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57N-iZ-eqZ">
+                                <rect key="frame" x="20" y="163" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-cK-Ezq">
+                                <rect key="frame" x="120" y="124" width="174" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Even or Odd"/>
+                                <connections>
+                                    <action selector="displayEvenOrOdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMm-YD-edk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="57N-iZ-eqZ" firstAttribute="top" secondItem="SEG-cK-Ezq" secondAttribute="bottom" constant="8" symbolic="YES" id="62T-7m-nzY"/>
+                            <constraint firstItem="rQt-vl-JOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TGZ-aG-Gas"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rQt-vl-JOD" secondAttribute="trailing" constant="20" id="ZSo-m7-Jib"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="57N-iZ-eqZ" secondAttribute="trailing" constant="20" id="elI-jw-W5C"/>
+                            <constraint firstItem="57N-iZ-eqZ" firstAttribute="top" secondItem="SEG-cK-Ezq" secondAttribute="bottom" constant="8" symbolic="YES" id="i6p-zz-m4R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SEG-cK-Ezq" secondAttribute="trailing" constant="120" id="iAn-Yh-8sL"/>
+                            <constraint firstItem="rQt-vl-JOD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rmR-Ju-UPd"/>
+                            <constraint firstItem="ZEi-Ig-8Pm" firstAttribute="top" secondItem="rQt-vl-JOD" secondAttribute="bottom" constant="1" id="soZ-7b-HTO"/>
+                            <constraint firstItem="ZEi-Ig-8Pm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uNG-9X-gAH"/>
+                            <constraint firstItem="57N-iZ-eqZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w61-Sj-e2z"/>
+                            <constraint firstItem="SEG-cK-Ezq" firstAttribute="top" secondItem="ZEi-Ig-8Pm" secondAttribute="bottom" constant="8" symbolic="YES" id="wyU-Fk-juy"/>
+                            <constraint firstItem="SEG-cK-Ezq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="y1v-me-sge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZEi-Ig-8Pm" secondAttribute="trailing" constant="20" id="zQG-aj-x2o"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ui9-Kf-GLJ" appends="YES" id="ZIG-sn-vut"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="headerLabel" destination="rQt-vl-JOD" id="Hld-Wb-78W"/>
+                        <outlet property="numberButton" destination="SEG-cK-Ezq" id="nd9-wV-Wy2"/>
+                        <outlet property="numberTextField" destination="ZEi-Ig-8Pm" id="WhI-KO-yib"/>
+                        <outlet property="resultLabel" destination="57N-iZ-eqZ" id="epS-SB-uw3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ui9-Kf-GLJ">
+                    <connections>
+                        <action selector="dismissKeyboardTap:" destination="BYZ-38-t0r" id="fE7-fA-eXO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
